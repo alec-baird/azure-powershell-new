@@ -21,11 +21,6 @@ jobs:
   steps:
   - checkout: self
     fetchTags: false
-  - task: UseDotNet@2
-    displayName: 'Use .NET Core sdk 3.1.x'
-    inputs:
-      packageType: sdk
-      version: 3.1.x
   - task: PowerShell@2
     displayName: Install platyPS
     inputs:
@@ -49,7 +44,7 @@ jobs:
       targetType: inline
       script: dotnet msbuild build.proj /t:"Build;GenerateHelp" /p:"PullRequestNumber=$(System.PullRequest.PullRequestNumber);IsSecurityCheck=true"
     env:
-      OCTOKITPAT: $(OCTOKITPAT)
+        OCTOKITPAT: $(OCTOKITPAT)
   - task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@2
     displayName: Run CredScan
     condition: in(variables['system.pullRequest.targetBranch'], 'generation', 'main')
