@@ -1,389 +1,1092 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="64" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2021-01-29" time="10:00:27">
-  <environment cwd="D:\dev\forked\azure-powershell\src\DesktopVirtualization" clr-version="Unknown" user="jehurren" machine-name="JEHURREN-RD" nunit-version="2.5.8.0" os-version="10.0.21303" platform="Microsoft Windows 10 Enterprise Insider Preview|C:\WINDOWS|\Device\Harddisk0\Partition3" user-domain="NORTHAMERICA" />
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="65" errors="0" failures="65" not-run="0" inconclusive="0" ignored="55" skipped="0" invalid="0" date="2022-11-08" time="21:05:56">
+  <environment cwd="/src/src/DesktopVirtualization" user="root" os-version="5.10.102.1-microsoft-standard-WSL2" clr-version="Unknown" platform="Linux" machine-name="d179ab3ed3f8" user-domain="" nunit-version="2.5.8.0" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="15.6874" asserts="0" description="Pester">
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="664.0633" asserts="0" description="Pester">
     <results>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Disconnect-AzWvdUserSession.Tests.ps1" executed="True" result="Success" success="True" time="1.0269" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Disconnect-AzWvdUserSession.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Disconnect-AzWvdUserSession.Tests.ps1" executed="True" result="Failure" success="False" time="9.9734" asserts="0" description="/src/src/DesktopVirtualization/test/Disconnect-AzWvdUserSession.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Disconnect-AzWvdUserSession" executed="True" result="Success" success="True" time="0.7699" asserts="0" description="Disconnect-AzWvdUserSession">
+          <test-suite type="TestFixture" name="Disconnect-AzWvdUserSession" executed="True" result="Failure" success="False" time="0.3872" asserts="0" description="Disconnect-AzWvdUserSession">
             <results>
-              <test-case description="Disconnect" name="Disconnect-AzWvdUserSession.Disconnect" time="0.3954" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Disconnect" name="Disconnect-AzWvdUserSession.Disconnect" time="0.223" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Disconnect-AzWvdUserSession+[NoContext]+Disconnect+$POST+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-1.wvdarmtest1.net/userSessions/2/disconnect?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Disconnect-AzWvdUserSession.Tests.ps1: line 16
+16:         Disconnect-AzWvdUserSession -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Expand-AzWvdMsixImage.Tests.ps1" executed="True" result="Success" success="True" time="0.2553" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Expand-AzWvdMsixImage.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Expand-AzWvdMsixImage.Tests.ps1" executed="True" result="Failure" success="False" time="9.4103" asserts="0" description="/src/src/DesktopVirtualization/test/Expand-AzWvdMsixImage.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Expand-AzWvdMsixImage" executed="True" result="Success" success="True" time="0.135" asserts="0" description="Expand-AzWvdMsixImage">
+          <test-suite type="TestFixture" name="Expand-AzWvdMsixImage" executed="True" result="Failure" success="False" time="0.1424" asserts="0" description="Expand-AzWvdMsixImage">
             <results>
-              <test-case description="Expand" name="Expand-AzWvdMsixImage.Expand" time="0.0706" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Expand" name="Expand-AzWvdMsixImage.Expand" time="0.1126" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Expand-AzWvdMsixImage+[NoContext]+Expand+$POST+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/datr-hp2/expandMsixImage?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Expand-AzWvdMsixImage.Tests.ps1: line 17
+17:         $package = Expand-AzWvdMsixImage -HostPoolName $env.HostPool `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdApplication.Tests.ps1" executed="True" result="Success" success="True" time="2.1434" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdApplication.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdApplication.Tests.ps1" executed="True" result="Failure" success="False" time="10.0456" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdApplication.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdApplication" executed="True" result="Success" success="True" time="1.9996" asserts="0" description="Get-AzWvdApplication">
+          <test-suite type="TestFixture" name="Get-AzWvdApplication" executed="True" result="Failure" success="False" time="0.6195" asserts="0" description="Get-AzWvdApplication">
             <results>
-              <test-case description="Get" name="Get-AzWvdApplication.Get" time="0.5323" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdApplication.List" time="0.5664" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="GetMsixApplication_RAG" name="Get-AzWvdApplication.GetMsixApplication_RAG" time="0.4423" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="GetMsixApplication_DAG" name="Get-AzWvdApplication.GetMsixApplication_DAG" time="0.356" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdApplication.Get" time="0.313" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdApplication+[NoContext]+Get+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplication.Tests.ps1: line 16
+16:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdApplication.List" time="0.2189" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdApplication+[NoContext]+List+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplication.Tests.ps1: line 61
+61:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="GetMsixApplication_RAG" name="Get-AzWvdApplication.GetMsixApplication_RAG" time="0.0116" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplication.Tests.ps1: line 136
+136:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="GetMsixApplication_DAG" name="Get-AzWvdApplication.GetMsixApplication_DAG" time="0.007" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplication.Tests.ps1: line 199
+199:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Success" success="True" time="0.5779" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdApplicationGroup.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Failure" success="False" time="12.1794" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdApplicationGroup.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdApplicationGroup" executed="True" result="Success" success="True" time="0.4524" asserts="0" description="Get-AzWvdApplicationGroup">
+          <test-suite type="TestFixture" name="Get-AzWvdApplicationGroup" executed="True" result="Failure" success="False" time="0.2793" asserts="0" description="Get-AzWvdApplicationGroup">
             <results>
-              <test-case description="Get" name="Get-AzWvdApplicationGroup.Get" time="0.1307" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdApplicationGroup.List" time="0.1455" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List Subscription Level" name="Get-AzWvdApplicationGroup.List Subscription Level" time="0.1054" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdApplicationGroup.Get" time="0.1444" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdApplicationGroup+[NoContext]+Get+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplicationGroup.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdApplicationGroup.List" time="0.0364" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdApplicationGroup+[NoContext]+List+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplicationGroup.Tests.ps1: line 69
+69:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List Subscription Level" name="Get-AzWvdApplicationGroup.List Subscription Level" time="0.0399" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdApplicationGroup+[NoContext]+List Subscription Level+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdApplicationGroup.Tests.ps1: line 137
+137:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdDesktop.Tests.ps1" executed="True" result="Success" success="True" time="0.3234" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdDesktop.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdDesktop.Tests.ps1" executed="True" result="Failure" success="False" time="9.4692" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdDesktop.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdDesktop" executed="True" result="Success" success="True" time="0.1755" asserts="0" description="Get-AzWvdDesktop">
+          <test-suite type="TestFixture" name="Get-AzWvdDesktop" executed="True" result="Failure" success="False" time="0.1724" asserts="0" description="Get-AzWvdDesktop">
             <results>
-              <test-case description="Get" name="Get-AzWvdDesktop.Get" time="0.076" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdDesktop.List" time="0.0472" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdDesktop.Get" time="0.1047" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdDesktop+[NoContext]+Get+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdDesktop.Tests.ps1: line 16
+16:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdDesktop.List" time="0.0284" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdDesktop+[NoContext]+List+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdDesktop.Tests.ps1: line 39
+39:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdHostPool.Tests.ps1" executed="True" result="Success" success="True" time="0.6597" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdHostPool.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdHostPool.Tests.ps1" executed="True" result="Failure" success="False" time="10.7464" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdHostPool.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdHostPool" executed="True" result="Success" success="True" time="0.5241" asserts="0" description="Get-AzWvdHostPool">
+          <test-suite type="TestFixture" name="Get-AzWvdHostPool" executed="True" result="Failure" success="False" time="0.2442" asserts="0" description="Get-AzWvdHostPool">
             <results>
-              <test-case description="Get" name="Get-AzWvdHostPool.Get" time="0.1337" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdHostPool.List" time="0.1278" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List Subscription Level" name="Get-AzWvdHostPool.List Subscription Level" time="0.1569" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdHostPool.Get" time="0.104" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdHostPool+[NoContext]+Get+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdHostPool.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdHostPool.List" time="0.0485" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdHostPool+[NoContext]+List+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdHostPool.Tests.ps1: line 75
+75:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List Subscription Level" name="Get-AzWvdHostPool.List Subscription Level" time="0.039" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdHostPool+[NoContext]+List Subscription Level+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdHostPool.Tests.ps1: line 175
+175:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdMsixPackage.Tests.ps1" executed="True" result="Success" success="True" time="0.264" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdMsixPackage.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdHostPoolRegistrationToken.Tests.ps1" executed="True" result="Failure" success="False" time="9.2493" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdHostPoolRegistrationToken.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdMsixPackage" executed="True" result="Success" success="True" time="0.1489" asserts="0" description="Get-AzWvdMsixPackage">
+          <test-suite type="TestFixture" name="Get-AzWvdHostPoolRegistrationToken" executed="True" result="Failure" success="False" time="0.0588" asserts="0" description="Get-AzWvdHostPoolRegistrationToken">
             <results>
-              <test-case description="List" name="Get-AzWvdMsixPackage.List" time="0.0596" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Get" name="Get-AzWvdMsixPackage.Get" time="0.0313" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Retrieve" name="Get-AzWvdHostPoolRegistrationToken.Retrieve" time="0.0352" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdHostPoolRegistrationToken+[NoContext]+Retrieve+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdHostPoolRegistrationToken.Tests.ps1: line 23
+23:                         -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdRegistrationInfo.Tests.ps1" executed="True" result="Success" success="True" time="0.2446" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdRegistrationInfo.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdMsixPackage.Tests.ps1" executed="True" result="Failure" success="False" time="8.7922" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdMsixPackage.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdRegistrationInfo" executed="True" result="Success" success="True" time="0.0899" asserts="0" description="Get-AzWvdRegistrationInfo">
+          <test-suite type="TestFixture" name="Get-AzWvdMsixPackage" executed="True" result="Failure" success="False" time="0.0598" asserts="0" description="Get-AzWvdMsixPackage">
             <results>
-              <test-case description="Get RegInfo" name="Get-AzWvdRegistrationInfo.Get RegInfo" time="0.0323" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="List" name="Get-AzWvdMsixPackage.List" time="0.0091" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdMsixPackage.Tests.ps1: line 21
+21:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Get" name="Get-AzWvdMsixPackage.Get" time="0.0066" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdMsixPackage.Tests.ps1: line 92
+92:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdScalingPlan.Tests.ps1" executed="True" result="Success" success="True" time="0.4415" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdScalingPlan.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdOperationResult.Tests.ps1" executed="True" result="Ignored" success="True" time="8.5102" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdOperationResult.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdScalingPlan" executed="True" result="Success" success="True" time="0.3188" asserts="0" description="Get-AzWvdScalingPlan">
+          <test-suite type="TestFixture" name="Get-AzWvdOperationResult" executed="True" result="Ignored" success="True" time="0.0224" asserts="0" description="Get-AzWvdOperationResult">
             <results>
-              <test-case description="Get" name="Get-AzWvdScalingPlan.Get" time="0.0979" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdScalingPlan.List" time="0.0757" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List By Subscription" name="Get-AzWvdScalingPlan.List By Subscription" time="0.0678" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdOperationResult.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdOperationResult.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdSessionHost.Tests.ps1" executed="True" result="Success" success="True" time="0.2428" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdSessionHost.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdOperationStatuses.Tests.ps1" executed="True" result="Ignored" success="True" time="9.2427" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdOperationStatuses.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdSessionHost" executed="True" result="Success" success="True" time="0.1164" asserts="0" description="Get-AzWvdSessionHost">
+          <test-suite type="TestFixture" name="Get-AzWvdOperationStatuses" executed="True" result="Ignored" success="True" time="0.0273" asserts="0" description="Get-AzWvdOperationStatuses">
             <results>
-              <test-case description="Get" name="Get-AzWvdSessionHost.Get" time="0.0245" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdSessionHost.List" time="0.0206" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdOperationStatuses.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdOperationStatuses.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdStartMenuItem.Tests.ps1" executed="True" result="Success" success="True" time="0.2063" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdStartMenuItem.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdPrivateEndpointConnection.Tests.ps1" executed="True" result="Ignored" success="True" time="9.6776" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdPrivateEndpointConnection.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdStartMenuItem" executed="True" result="Success" success="True" time="0.0973" asserts="0" description="Get-AzWvdStartMenuItem">
+          <test-suite type="TestFixture" name="Get-AzWvdPrivateEndpointConnection" executed="True" result="Ignored" success="True" time="0.0385" asserts="0" description="Get-AzWvdPrivateEndpointConnection">
             <results>
-              <test-case description="List" name="Get-AzWvdStartMenuItem.List" time="0.0495" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="List" name="Get-AzWvdPrivateEndpointConnection.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzWvdPrivateEndpointConnection.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get1" name="Get-AzWvdPrivateEndpointConnection.Get1" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="List1" name="Get-AzWvdPrivateEndpointConnection.List1" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity1" name="Get-AzWvdPrivateEndpointConnection.GetViaIdentity1" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdPrivateEndpointConnection.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdUserSession.Tests.ps1" executed="True" result="Success" success="True" time="0.2315" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdUserSession.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdPrivateLinkResource.Tests.ps1" executed="True" result="Ignored" success="True" time="9.0312" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdPrivateLinkResource.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdUserSession" executed="True" result="Success" success="True" time="0.1044" asserts="0" description="Get-AzWvdUserSession">
+          <test-suite type="TestFixture" name="Get-AzWvdPrivateLinkResource" executed="True" result="Ignored" success="True" time="0.0298" asserts="0" description="Get-AzWvdPrivateLinkResource">
             <results>
-              <test-case description="Get" name="Get-AzWvdUserSession.Get" time="0.0094" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdUserSession.List" time="0.0217" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List host pool Level" name="Get-AzWvdUserSession.List host pool Level" time="0.0193" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="List" name="Get-AzWvdPrivateLinkResource.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="List1" name="Get-AzWvdPrivateLinkResource.List1" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdWorkspace.Tests.ps1" executed="True" result="Success" success="True" time="0.3742" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Get-AzWvdWorkspace.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdRegistrationInfo.Tests.ps1" executed="True" result="Failure" success="False" time="8.8525" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdRegistrationInfo.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Get-AzWvdWorkspace" executed="True" result="Success" success="True" time="0.2581" asserts="0" description="Get-AzWvdWorkspace">
+          <test-suite type="TestFixture" name="Get-AzWvdRegistrationInfo" executed="True" result="Failure" success="False" time="0.0983" asserts="0" description="Get-AzWvdRegistrationInfo">
             <results>
-              <test-case description="Get" name="Get-AzWvdWorkspace.Get" time="0.0759" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List" name="Get-AzWvdWorkspace.List" time="0.0482" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="List Subscription Level" name="Get-AzWvdWorkspace.List Subscription Level" time="0.0466" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get RegInfo" name="Get-AzWvdRegistrationInfo.Get RegInfo" time="0.0726" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdRegistrationInfo+[NoContext]+Get RegInfo+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdRegistrationInfo.Tests.ps1: line 23
+23:         -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdApplication.Tests.ps1" executed="True" result="Success" success="True" time="1.4667" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdApplication.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdScalingPlan.Tests.ps1" executed="True" result="Failure" success="False" time="9.2641" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdScalingPlan.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdApplication" executed="True" result="Success" success="True" time="1.3351" asserts="0" description="New-AzWvdApplication">
+          <test-suite type="TestFixture" name="Get-AzWvdScalingPlan" executed="True" result="Failure" success="False" time="0.3169" asserts="0" description="Get-AzWvdScalingPlan">
             <results>
-              <test-case description="Create" name="New-AzWvdApplication.Create" time="0.261" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="AppAlias" name="New-AzWvdApplication.AppAlias" time="0.4132" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Create_MsixApplication_RAG" name="New-AzWvdApplication.Create_MsixApplication_RAG" time="0.3155" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Create_MsixApplication_DAG" name="New-AzWvdApplication.Create_MsixApplication_DAG" time="0.2432" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdScalingPlan.Get" time="0.1712" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdScalingPlan+[NoContext]+Get+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/jehurren-westcentralus/providers/Microsoft.DesktopVirtualization/scalingPlans/ScalingPlanPowershellContained1?api-version=2022-10-14-preview+2' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdScalingPlan.Tests.ps1: line 47
+47:             $scalingPlan = Remove-AzWvdScalingPlan `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdScalingPlan.List" time="0.0435" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdScalingPlan+[NoContext]+List+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/jehurren-westcentralus/providers/Microsoft.DesktopVirtualization/scalingPlans/ScalingPlanPowershellContained1?api-version=2022-10-14-preview+2' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdScalingPlan.Tests.ps1: line 97
+97:             $scalingPlan = Remove-AzWvdScalingPlan `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List By Subscription" name="Get-AzWvdScalingPlan.List By Subscription" time="0.0483" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdScalingPlan+[NoContext]+List By Subscription+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/jehurren-westcentralus/providers/Microsoft.DesktopVirtualization/scalingPlans/ScalingPlanPowershellContained1?api-version=2022-10-14-preview+2' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdScalingPlan.Tests.ps1: line 149
+149:             $scalingPlan = Remove-AzWvdScalingPlan `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Success" success="True" time="0.2211" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdApplicationGroup.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdScalingPlanPooledSchedule.Tests.ps1" executed="True" result="Ignored" success="True" time="9.4513" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdScalingPlanPooledSchedule.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdApplicationGroup" executed="True" result="Success" success="True" time="0.1024" asserts="0" description="New-AzWvdApplicationGroup">
+          <test-suite type="TestFixture" name="Get-AzWvdScalingPlanPooledSchedule" executed="True" result="Ignored" success="True" time="0.0253" asserts="0" description="Get-AzWvdScalingPlanPooledSchedule">
             <results>
-              <test-case description="Create" name="New-AzWvdApplicationGroup.Create" time="0.0438" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="List" name="Get-AzWvdScalingPlanPooledSchedule.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzWvdScalingPlanPooledSchedule.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdScalingPlanPooledSchedule.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdHostPool.Tests.ps1" executed="True" result="Success" success="True" time="0.3106" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdHostPool.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHost.Tests.ps1" executed="True" result="Failure" success="False" time="9.1405" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHost.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdHostPool" executed="True" result="Success" success="True" time="0.1913" asserts="0" description="New-AzWvdHostPool">
+          <test-suite type="TestFixture" name="Get-AzWvdSessionHost" executed="True" result="Failure" success="False" time="0.1579" asserts="0" description="Get-AzWvdSessionHost">
             <results>
-              <test-case description="FullSenerioCreate" name="New-AzWvdHostPool.FullSenerioCreate" time="0.0353" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Create" name="New-AzWvdHostPool.Create" time="0.0994" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdSessionHost.Get" time="0.0928" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdSessionHost+[NoContext]+Get+$GET+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-0.wvdarmtest1.net?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdSessionHost.Tests.ps1: line 16
+16:         $sessionHost = Get-AzWvdSessionHost -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdSessionHost.List" time="0.0261" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdSessionHost+[NoContext]+List+$GET+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdSessionHost.Tests.ps1: line 24
+24:         $sessionHosts = Get-AzWvdSessionHost -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdMsixPackage.Tests.ps1" executed="True" result="Success" success="True" time="0.2392" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdMsixPackage.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostConfiguration.Tests.ps1" executed="True" result="Ignored" success="True" time="8.9595" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostConfiguration.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdMsixPackage" executed="True" result="Success" success="True" time="0.1256" asserts="0" description="New-AzWvdMsixPackage">
+          <test-suite type="TestFixture" name="Get-AzWvdSessionHostConfiguration" executed="True" result="Ignored" success="True" time="0.0282" asserts="0" description="Get-AzWvdSessionHostConfiguration">
             <results>
-              <test-case description="Create" name="New-AzWvdMsixPackage.Create" time="0.0366" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="PackageAlias" name="New-AzWvdMsixPackage.PackageAlias" time="0.0408" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdSessionHostConfiguration.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="List" name="Get-AzWvdSessionHostConfiguration.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdSessionHostConfiguration.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdRegistrationInfo.Tests.ps1" executed="True" result="Success" success="True" time="0.1734" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdRegistrationInfo.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostManagement.Tests.ps1" executed="True" result="Ignored" success="True" time="9.0252" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostManagement.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdRegistrationInfo" executed="True" result="Success" success="True" time="0.0641" asserts="0" description="New-AzWvdRegistrationInfo">
+          <test-suite type="TestFixture" name="Get-AzWvdSessionHostManagement" executed="True" result="Ignored" success="True" time="0.0324" asserts="0" description="Get-AzWvdSessionHostManagement">
             <results>
-              <test-case description="Create new RegistrationInfo" name="New-AzWvdRegistrationInfo.Create new RegistrationInfo" time="0.0204" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdSessionHostManagement.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="List" name="Get-AzWvdSessionHostManagement.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdSessionHostManagement.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdScalingPlan.Tests.ps1" executed="True" result="Success" success="True" time="0.3554" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdScalingPlan.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostManagementsOperationResult.Tests.ps1" executed="True" result="Ignored" success="True" time="8.9118" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostManagementsOperationResult.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdScalingPlan" executed="True" result="Success" success="True" time="0.2036" asserts="0" description="New-AzWvdScalingPlan">
+          <test-suite type="TestFixture" name="Get-AzWvdSessionHostManagementsOperationResult" executed="True" result="Ignored" success="True" time="0.0179" asserts="0" description="Get-AzWvdSessionHostManagementsOperationResult">
             <results>
-              <test-case description="CreateExpanded" name="New-AzWvdScalingPlan.CreateExpanded" time="0.1398" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdSessionHostManagementsOperationResult.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdSessionHostManagementsOperationResult.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdWorkspace.Tests.ps1" executed="True" result="Success" success="True" time="0.2303" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\New-AzWvdWorkspace.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostManagementsOperationStatus.Tests.ps1" executed="True" result="Ignored" success="True" time="9.5731" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdSessionHostManagementsOperationStatus.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="New-AzWvdWorkspace" executed="True" result="Success" success="True" time="0.086" asserts="0" description="New-AzWvdWorkspace">
+          <test-suite type="TestFixture" name="Get-AzWvdSessionHostManagementsOperationStatus" executed="True" result="Ignored" success="True" time="0.0212" asserts="0" description="Get-AzWvdSessionHostManagementsOperationStatus">
             <results>
-              <test-case description="Create" name="New-AzWvdWorkspace.Create" time="0.0209" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdSessionHostManagementsOperationStatus.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdSessionHostManagementsOperationStatus.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Register-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Success" success="True" time="0.233" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Register-AzWvdApplicationGroup.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdStartMenuItem.Tests.ps1" executed="True" result="Failure" success="False" time="18.5656" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdStartMenuItem.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Register-AzWvdApplicationGroup" executed="True" result="Success" success="True" time="0.1135" asserts="0" description="Register-AzWvdApplicationGroup">
+          <test-suite type="TestFixture" name="Get-AzWvdStartMenuItem" executed="True" result="Failure" success="False" time="0.123" asserts="0" description="Get-AzWvdStartMenuItem">
             <results>
-              <test-case description="Register ApplicationGroup" name="Register-AzWvdApplicationGroup.Register ApplicationGroup" time="0.0649" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="List" name="Get-AzWvdStartMenuItem.List" time="0.0816" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdStartMenuItem+[NoContext]+List+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdStartMenuItem.Tests.ps1: line 16
+16:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdApplication.Tests.ps1" executed="True" result="Success" success="True" time="0.9958" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdApplication.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdUpdateDetail.Tests.ps1" executed="True" result="Ignored" success="True" time="11.3618" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdUpdateDetail.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdApplication" executed="True" result="Success" success="True" time="0.8577" asserts="0" description="Remove-AzWvdApplication">
+          <test-suite type="TestFixture" name="Get-AzWvdUpdateDetail" executed="True" result="Ignored" success="True" time="0.0253" asserts="0" description="Get-AzWvdUpdateDetail">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdApplication.Delete" time="0.2908" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Delete_MsixApplication_RAG" name="Remove-AzWvdApplication.Delete_MsixApplication_RAG" time="0.242" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Delete_MsixApplication_DAG" name="Remove-AzWvdApplication.Delete_MsixApplication_DAG" time="0.2353" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdUpdateDetail.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="List" name="Get-AzWvdUpdateDetail.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdUpdateDetail.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Success" success="True" time="0.1898" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdApplicationGroup.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdUpdateOperationResult.Tests.ps1" executed="True" result="Ignored" success="True" time="10.2648" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdUpdateOperationResult.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdApplicationGroup" executed="True" result="Success" success="True" time="0.086" asserts="0" description="Remove-AzWvdApplicationGroup">
+          <test-suite type="TestFixture" name="Get-AzWvdUpdateOperationResult" executed="True" result="Ignored" success="True" time="0.0183" asserts="0" description="Get-AzWvdUpdateOperationResult">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdApplicationGroup.Delete" time="0.0393" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdUpdateOperationResult.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdUpdateOperationResult.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdHostPool.Tests.ps1" executed="True" result="Success" success="True" time="0.2672" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdHostPool.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdUpdateValidationOperationResult.Tests.ps1" executed="True" result="Ignored" success="True" time="9.7574" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdUpdateValidationOperationResult.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdHostPool" executed="True" result="Success" success="True" time="0.155" asserts="0" description="Remove-AzWvdHostPool">
+          <test-suite type="TestFixture" name="Get-AzWvdUpdateValidationOperationResult" executed="True" result="Ignored" success="True" time="0.0169" asserts="0" description="Get-AzWvdUpdateValidationOperationResult">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdHostPool.Delete" time="0.0921" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdUpdateValidationOperationResult.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzWvdUpdateValidationOperationResult.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdMsixPackage.Tests.ps1" executed="True" result="Success" success="True" time="0.2" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdMsixPackage.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdUserSession.Tests.ps1" executed="True" result="Failure" success="False" time="13.5207" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdUserSession.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdMsixPackage" executed="True" result="Success" success="True" time="0.0859" asserts="0" description="Remove-AzWvdMsixPackage">
+          <test-suite type="TestFixture" name="Get-AzWvdUserSession" executed="True" result="Failure" success="False" time="0.4359" asserts="0" description="Get-AzWvdUserSession">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdMsixPackage.Delete" time="0.0357" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdUserSession.Get" time="0.1933" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdUserSession+[NoContext]+Get+$GET+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-1.wvdarmtest1.net/userSessions/2?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdUserSession.Tests.ps1: line 16
+16:         $userSession = Get-AzWvdUserSession -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdUserSession.List" time="0.0792" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdUserSession+[NoContext]+List+$GET+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-1.wvdarmtest1.net/userSessions?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdUserSession.Tests.ps1: line 25
+25:         $userSessions = Get-AzWvdUserSession -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List host pool Level" name="Get-AzWvdUserSession.List host pool Level" time="0.0458" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdUserSession+[NoContext]+List host pool Level+$GET+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/userSessions?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdUserSession.Tests.ps1: line 35
+35:         $userSessions = Get-AzWvdUserSession -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdRegistrationInfo.Tests.ps1" executed="True" result="Success" success="True" time="0.2032" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdRegistrationInfo.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Get-AzWvdWorkspace.Tests.ps1" executed="True" result="Failure" success="False" time="12.9361" asserts="0" description="/src/src/DesktopVirtualization/test/Get-AzWvdWorkspace.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdRegistrationInfo" executed="True" result="Success" success="True" time="0.0784" asserts="0" description="Remove-AzWvdRegistrationInfo">
+          <test-suite type="TestFixture" name="Get-AzWvdWorkspace" executed="True" result="Failure" success="False" time="0.1991" asserts="0" description="Get-AzWvdWorkspace">
             <results>
-              <test-case description="Remove RegInfo" name="Remove-AzWvdRegistrationInfo.Remove RegInfo" time="0.0236" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzWvdWorkspace.Get" time="0.0943" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdWorkspace+[NoContext]+Get+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdWorkspace.Tests.ps1: line 16
+16:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List" name="Get-AzWvdWorkspace.List" time="0.0289" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdWorkspace+[NoContext]+List+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdWorkspace.Tests.ps1: line 39
+39:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="List Subscription Level" name="Get-AzWvdWorkspace.List Subscription Level" time="0.0235" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Get-AzWvdWorkspace+[NoContext]+List Subscription Level+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Get-AzWvdWorkspace.Tests.ps1: line 82
+82:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdScalingPlan.Tests.ps1" executed="True" result="Success" success="True" time="0.2445" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdScalingPlan.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Invoke-AzWvdControlHostPoolUpdate.Tests.ps1" executed="True" result="Ignored" success="True" time="9.3185" asserts="0" description="/src/src/DesktopVirtualization/test/Invoke-AzWvdControlHostPoolUpdate.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdScalingPlan" executed="True" result="Success" success="True" time="0.1087" asserts="0" description="Remove-AzWvdScalingPlan">
+          <test-suite type="TestFixture" name="Invoke-AzWvdControlHostPoolUpdate" executed="True" result="Ignored" success="True" time="0.0308" asserts="0" description="Invoke-AzWvdControlHostPoolUpdate">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdScalingPlan.Delete" time="0.0479" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="ControlExpanded" name="Invoke-AzWvdControlHostPoolUpdate.ControlExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Control" name="Invoke-AzWvdControlHostPoolUpdate.Control" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="ControlViaIdentityExpanded" name="Invoke-AzWvdControlHostPoolUpdate.ControlViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="ControlViaIdentity" name="Invoke-AzWvdControlHostPoolUpdate.ControlViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdSessionHost.Tests.ps1" executed="True" result="Success" success="True" time="0.2324" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdSessionHost.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Invoke-AzWvdDoHostPoolNotUseInternalApi.Tests.ps1" executed="True" result="Ignored" success="True" time="9.256" asserts="0" description="/src/src/DesktopVirtualization/test/Invoke-AzWvdDoHostPoolNotUseInternalApi.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdSessionHost" executed="True" result="Success" success="True" time="0.1158" asserts="0" description="Remove-AzWvdSessionHost">
+          <test-suite type="TestFixture" name="Invoke-AzWvdDoHostPoolNotUseInternalApi" executed="True" result="Ignored" success="True" time="0.0256" asserts="0" description="Invoke-AzWvdDoHostPoolNotUseInternalApi">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdSessionHost.Delete" time="0.0594" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Do" name="Invoke-AzWvdDoHostPoolNotUseInternalApi.Do" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DoViaIdentity" name="Invoke-AzWvdDoHostPoolNotUseInternalApi.DoViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdUserSession.Tests.ps1" executed="True" result="Success" success="True" time="0.1999" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdUserSession.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdApplication.Tests.ps1" executed="True" result="Failure" success="False" time="11.3831" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdApplication.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdUserSession" executed="True" result="Success" success="True" time="0.0913" asserts="0" description="Remove-AzWvdUserSession">
+          <test-suite type="TestFixture" name="New-AzWvdApplication" executed="True" result="Failure" success="False" time="0.4492" asserts="0" description="New-AzWvdApplication">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdUserSession.Delete" time="0.0412" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Create" name="New-AzWvdApplication.Create" time="0.2014" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdApplication+[NoContext]+Create+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdApplication.Tests.ps1: line 16
+16:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="AppAlias" name="New-AzWvdApplication.AppAlias" time="0.1444" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdApplication+[NoContext]+AppAlias+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdApplication.Tests.ps1: line 69
+69:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Create_MsixApplication_RAG" name="New-AzWvdApplication.Create_MsixApplication_RAG" time="0.0089" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdApplication.Tests.ps1: line 110
+110:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Create_MsixApplication_DAG" name="New-AzWvdApplication.Create_MsixApplication_DAG" time="0.0113" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdApplication.Tests.ps1: line 172
+172:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdWorkspace.Tests.ps1" executed="True" result="Success" success="True" time="0.2019" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Remove-AzWvdWorkspace.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Failure" success="False" time="13.0874" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdApplicationGroup.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Remove-AzWvdWorkspace" executed="True" result="Success" success="True" time="0.0825" asserts="0" description="Remove-AzWvdWorkspace">
+          <test-suite type="TestFixture" name="New-AzWvdApplicationGroup" executed="True" result="Failure" success="False" time="0.112" asserts="0" description="New-AzWvdApplicationGroup">
             <results>
-              <test-case description="Delete" name="Remove-AzWvdWorkspace.Delete" time="0.0198" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Create" name="New-AzWvdApplicationGroup.Create" time="0.0788" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdApplicationGroup+[NoContext]+Create+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdApplicationGroup.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Send-AzWvdUserSessionMessage.Tests.ps1" executed="True" result="Success" success="True" time="0.206" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Send-AzWvdUserSessionMessage.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdHostPool.Tests.ps1" executed="True" result="Failure" success="False" time="15.5279" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdHostPool.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Send-AzWvdUserSessionMessage" executed="True" result="Success" success="True" time="0.0894" asserts="0" description="Send-AzWvdUserSessionMessage">
+          <test-suite type="TestFixture" name="New-AzWvdHostPool" executed="True" result="Failure" success="False" time="0.152" asserts="0" description="New-AzWvdHostPool">
             <results>
-              <test-case description="Send" name="Send-AzWvdUserSessionMessage.Send" time="0.0339" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="FullSenerioCreate" name="New-AzWvdHostPool.FullSenerioCreate" time="0.0717" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdHostPool+[NoContext]+FullSenerioCreate+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/custom/New-AzWvdHostPool_FullSenerioCreate.ps1: line 111
+111:         $hostpool = Az.DesktopVirtualization\New-AzWvdHostPool @PSBoundParameters
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Create" name="New-AzWvdHostPool.Create" time="0.0306" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdHostPool+[NoContext]+Create+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdHostPool.Tests.ps1: line 47
+47:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Unregister-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Success" success="True" time="0.2342" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Unregister-AzWvdApplicationGroup.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdMsixPackage.Tests.ps1" executed="True" result="Failure" success="False" time="16.0779" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdMsixPackage.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Unregister-AzWvdApplicationGroup" executed="True" result="Success" success="True" time="0.1253" asserts="0" description="Unregister-AzWvdApplicationGroup">
+          <test-suite type="TestFixture" name="New-AzWvdMsixPackage" executed="True" result="Failure" success="False" time="0.1195" asserts="0" description="New-AzWvdMsixPackage">
             <results>
-              <test-case description="Unregister ApplicationGroup" name="Unregister-AzWvdApplicationGroup.Unregister ApplicationGroup" time="0.0734" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Create" name="New-AzWvdMsixPackage.Create" time="0.0076" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdMsixPackage.Tests.ps1: line 21
+21:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="PackageAlias" name="New-AzWvdMsixPackage.PackageAlias" time="0.0777" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdMsixPackage+[NoContext]+PackageAlias+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourcegroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/datr-hp2/msixPackages/MsixPackage_1.0.0.0_neutral__zf7zaz2wb1ayy?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdMsixPackage.Tests.ps1: line 56
+56:         $removePackage_IfExists = Remove-AzWvdMsixPackage -FullName 'MsixPackage_1.0.0.0_neutral__zf7zaz2wb1ayy' `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdApplication.Tests.ps1" executed="True" result="Success" success="True" time="0.512" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdApplication.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdRegistrationInfo.Tests.ps1" executed="True" result="Failure" success="False" time="11.872" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdRegistrationInfo.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdApplication" executed="True" result="Success" success="True" time="0.3996" asserts="0" description="Update-AzWvdApplication">
+          <test-suite type="TestFixture" name="New-AzWvdRegistrationInfo" executed="True" result="Failure" success="False" time="0.1057" asserts="0" description="New-AzWvdRegistrationInfo">
             <results>
-              <test-case description="Update" name="Update-AzWvdApplication.Update" time="0.1373" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Update-MsixApplication" name="Update-AzWvdApplication.Update-MsixApplication" time="0.1723" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Create new RegistrationInfo" name="New-AzWvdRegistrationInfo.Create new RegistrationInfo" time="0.075" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdRegistrationInfo+[NoContext]+Create new RegistrationInfo+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdRegistrationInfo.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Success" success="True" time="0.2531" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdApplicationGroup.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdScalingPlan.Tests.ps1" executed="True" result="Failure" success="False" time="12.533" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdScalingPlan.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdApplicationGroup" executed="True" result="Success" success="True" time="0.119" asserts="0" description="Update-AzWvdApplicationGroup">
+          <test-suite type="TestFixture" name="New-AzWvdScalingPlan" executed="True" result="Failure" success="False" time="0.1304" asserts="0" description="New-AzWvdScalingPlan">
             <results>
-              <test-case description="Update" name="Update-AzWvdApplicationGroup.Update" time="0.0632" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CreateExpanded" name="New-AzWvdScalingPlan.CreateExpanded" time="0.094" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdScalingPlan+[NoContext]+CreateExpanded+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/jehurren-westcentralus/providers/Microsoft.DesktopVirtualization/scalingPlans/ScalingPlanPowershellContained1?api-version=2022-10-14-preview+2' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdScalingPlan.Tests.ps1: line 103
+103:             $scalingPlan = Remove-AzWvdScalingPlan `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdDesktop.Tests.ps1" executed="True" result="Success" success="True" time="0.2661" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdDesktop.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdScalingPlanPooledSchedule.Tests.ps1" executed="True" result="Ignored" success="True" time="11.0135" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdScalingPlanPooledSchedule.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdDesktop" executed="True" result="Success" success="True" time="0.1151" asserts="0" description="Update-AzWvdDesktop">
+          <test-suite type="TestFixture" name="New-AzWvdScalingPlanPooledSchedule" executed="True" result="Ignored" success="True" time="0.0168" asserts="0" description="New-AzWvdScalingPlanPooledSchedule">
             <results>
-              <test-case description="Update" name="Update-AzWvdDesktop.Update" time="0.0609" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CreateExpanded" name="New-AzWvdScalingPlanPooledSchedule.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdHostPool.Tests.ps1" executed="True" result="Success" success="True" time="0.3229" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdHostPool.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdSessionHostConfiguration.Tests.ps1" executed="True" result="Ignored" success="True" time="12.5407" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdSessionHostConfiguration.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdHostPool" executed="True" result="Success" success="True" time="0.2073" asserts="0" description="Update-AzWvdHostPool">
+          <test-suite type="TestFixture" name="New-AzWvdSessionHostConfiguration" executed="True" result="Ignored" success="True" time="0.0239" asserts="0" description="New-AzWvdSessionHostConfiguration">
             <results>
-              <test-case description="Update" name="Update-AzWvdHostPool.Update" time="0.1446" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CreateExpanded" name="New-AzWvdSessionHostConfiguration.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdMsixPackage.Tests.ps1" executed="True" result="Success" success="True" time="0.2546" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdMsixPackage.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdSessionHostManagement.Tests.ps1" executed="True" result="Ignored" success="True" time="13.7752" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdSessionHostManagement.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdMsixPackage" executed="True" result="Success" success="True" time="0.1398" asserts="0" description="Update-AzWvdMsixPackage">
+          <test-suite type="TestFixture" name="New-AzWvdSessionHostManagement" executed="True" result="Ignored" success="True" time="0.0227" asserts="0" description="New-AzWvdSessionHostManagement">
             <results>
-              <test-case description="Update" name="Update-AzWvdMsixPackage.Update" time="0.0718" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CreateExpanded" name="New-AzWvdSessionHostManagement.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdScalingPlan.Tests.ps1" executed="True" result="Success" success="True" time="0.2646" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdScalingPlan.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/New-AzWvdWorkspace.Tests.ps1" executed="True" result="Failure" success="False" time="11.0354" asserts="0" description="/src/src/DesktopVirtualization/test/New-AzWvdWorkspace.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdScalingPlan" executed="True" result="Success" success="True" time="0.1413" asserts="0" description="Update-AzWvdScalingPlan">
+          <test-suite type="TestFixture" name="New-AzWvdWorkspace" executed="True" result="Failure" success="False" time="0.0939" asserts="0" description="New-AzWvdWorkspace">
             <results>
-              <test-case description="UpdateExpanded" name="Update-AzWvdScalingPlan.UpdateExpanded" time="0.0691" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Create" name="New-AzWvdWorkspace.Create" time="0.0686" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'New-AzWvdWorkspace+[NoContext]+Create+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/New-AzWvdWorkspace.Tests.ps1: line 16
+16:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdSessionHost.Tests.ps1" executed="True" result="Success" success="True" time="0.2013" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdSessionHost.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Register-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Failure" success="False" time="11.691" asserts="0" description="/src/src/DesktopVirtualization/test/Register-AzWvdApplicationGroup.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdSessionHost" executed="True" result="Success" success="True" time="0.087" asserts="0" description="Update-AzWvdSessionHost">
+          <test-suite type="TestFixture" name="Register-AzWvdApplicationGroup" executed="True" result="Failure" success="False" time="0.0876" asserts="0" description="Register-AzWvdApplicationGroup">
             <results>
-              <test-case description="Update" name="Update-AzWvdSessionHost.Update" time="0.0376" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Register ApplicationGroup" name="Register-AzWvdApplicationGroup.Register ApplicationGroup" time="0.0388" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Register-AzWvdApplicationGroup+[NoContext]+Register ApplicationGroup+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Register-AzWvdApplicationGroup.Tests.ps1: line 16
+16:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdWorkspace.Tests.ps1" executed="True" result="Success" success="True" time="0.2166" asserts="0" description="D:\dev\forked\azure-powershell\src\DesktopVirtualization\test\Update-AzWvdWorkspace.Tests.ps1">
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdApplication.Tests.ps1" executed="True" result="Failure" success="False" time="12.3169" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdApplication.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="Update-AzWvdWorkspace" executed="True" result="Success" success="True" time="0.0971" asserts="0" description="Update-AzWvdWorkspace">
+          <test-suite type="TestFixture" name="Remove-AzWvdApplication" executed="True" result="Failure" success="False" time="0.2902" asserts="0" description="Remove-AzWvdApplication">
             <results>
-              <test-case description="Update" name="Update-AzWvdWorkspace.Update" time="0.0361" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Delete" name="Remove-AzWvdApplication.Delete" time="0.2126" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdApplication+[NoContext]+Delete+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdApplication.Tests.ps1: line 16
+16:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete_MsixApplication_RAG" name="Remove-AzWvdApplication.Delete_MsixApplication_RAG" time="0.009" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdApplication.Tests.ps1: line 75
+75:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete_MsixApplication_DAG" name="Remove-AzWvdApplication.Delete_MsixApplication_DAG" time="0.0105" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdApplication.Tests.ps1: line 148
+148:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Failure" success="False" time="15.031" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdApplicationGroup.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdApplicationGroup" executed="True" result="Failure" success="False" time="0.2578" asserts="0" description="Remove-AzWvdApplicationGroup">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdApplicationGroup.Delete" time="0.1549" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdApplicationGroup+[NoContext]+Delete+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdApplicationGroup.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdHostPool.Tests.ps1" executed="True" result="Failure" success="False" time="13.4154" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdHostPool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdHostPool" executed="True" result="Failure" success="False" time="0.1036" asserts="0" description="Remove-AzWvdHostPool">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdHostPool.Delete" time="0.0695" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdHostPool+[NoContext]+Delete+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdHostPool.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdMsixPackage.Tests.ps1" executed="True" result="Failure" success="False" time="8.8428" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdMsixPackage.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdMsixPackage" executed="True" result="Failure" success="False" time="0.0303" asserts="0" description="Remove-AzWvdMsixPackage">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdMsixPackage.Delete" time="0.0083" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdMsixPackage.Tests.ps1: line 21
+21:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdPrivateEndpointConnection.Tests.ps1" executed="True" result="Ignored" success="True" time="8.8275" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdPrivateEndpointConnection.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdPrivateEndpointConnection" executed="True" result="Ignored" success="True" time="0.0261" asserts="0" description="Remove-AzWvdPrivateEndpointConnection">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdPrivateEndpointConnection.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Delete1" name="Remove-AzWvdPrivateEndpointConnection.Delete1" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity1" name="Remove-AzWvdPrivateEndpointConnection.DeleteViaIdentity1" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzWvdPrivateEndpointConnection.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdRegistrationInfo.Tests.ps1" executed="True" result="Failure" success="False" time="9.7482" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdRegistrationInfo.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdRegistrationInfo" executed="True" result="Failure" success="False" time="0.114" asserts="0" description="Remove-AzWvdRegistrationInfo">
+            <results>
+              <test-case description="Remove RegInfo" name="Remove-AzWvdRegistrationInfo.Remove RegInfo" time="0.0799" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdRegistrationInfo+[NoContext]+Remove RegInfo+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdRegistrationInfo.Tests.ps1: line 24
+24:                             -ExpirationTime $(($date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdScalingPlan.Tests.ps1" executed="True" result="Failure" success="False" time="9.6804" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdScalingPlan.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdScalingPlan" executed="True" result="Failure" success="False" time="0.0994" asserts="0" description="Remove-AzWvdScalingPlan">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdScalingPlan.Delete" time="0.0776" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdScalingPlan+[NoContext]+Delete+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/jehurren-westcentralus/providers/Microsoft.DesktopVirtualization/scalingPlans/ScalingPlanPowershellContained1?api-version=2022-10-14-preview+2' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdScalingPlan.Tests.ps1: line 51
+51:             $scalingPlan = Remove-AzWvdScalingPlan `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdScalingPlanPooledSchedule.Tests.ps1" executed="True" result="Ignored" success="True" time="8.3384" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdScalingPlanPooledSchedule.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdScalingPlanPooledSchedule" executed="True" result="Ignored" success="True" time="0.018" asserts="0" description="Remove-AzWvdScalingPlanPooledSchedule">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdScalingPlanPooledSchedule.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzWvdScalingPlanPooledSchedule.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdSessionHost.Tests.ps1" executed="True" result="Failure" success="False" time="8.6304" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdSessionHost.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdSessionHost" executed="True" result="Failure" success="False" time="0.0945" asserts="0" description="Remove-AzWvdSessionHost">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdSessionHost.Delete" time="0.0704" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdSessionHost+[NoContext]+Delete+$GET+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-0.wvdarmtest1.net?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdSessionHost.Tests.ps1: line 16
+16:         Get-AzWvdSessionHost -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdUserSession.Tests.ps1" executed="True" result="Failure" success="False" time="8.9843" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdUserSession.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdUserSession" executed="True" result="Failure" success="False" time="0.1001" asserts="0" description="Remove-AzWvdUserSession">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdUserSession.Delete" time="0.0819" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdUserSession+[NoContext]+Delete+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-1.wvdarmtest1.net/userSessions/4?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdUserSession.Tests.ps1: line 16
+16:         Remove-AzWvdUserSession -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Remove-AzWvdWorkspace.Tests.ps1" executed="True" result="Failure" success="False" time="8.6051" asserts="0" description="/src/src/DesktopVirtualization/test/Remove-AzWvdWorkspace.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzWvdWorkspace" executed="True" result="Failure" success="False" time="0.0838" asserts="0" description="Remove-AzWvdWorkspace">
+            <results>
+              <test-case description="Delete" name="Remove-AzWvdWorkspace.Delete" time="0.0669" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Remove-AzWvdWorkspace+[NoContext]+Delete+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Remove-AzWvdWorkspace.Tests.ps1: line 16
+16:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Send-AzWvdUserSessionMessage.Tests.ps1" executed="True" result="Failure" success="False" time="8.1378" asserts="0" description="/src/src/DesktopVirtualization/test/Send-AzWvdUserSessionMessage.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Send-AzWvdUserSessionMessage" executed="True" result="Failure" success="False" time="0.1084" asserts="0" description="Send-AzWvdUserSessionMessage">
+            <results>
+              <test-case description="Send" name="Send-AzWvdUserSessionMessage.Send" time="0.0843" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Send-AzWvdUserSessionMessage+[NoContext]+Send+$POST+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-1.wvdarmtest1.net/userSessions/4/sendMessage?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Send-AzWvdUserSessionMessage.Tests.ps1: line 16
+16:         Send-AzWvdUserSessionMessage -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Unregister-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Failure" success="False" time="9.5538" asserts="0" description="/src/src/DesktopVirtualization/test/Unregister-AzWvdApplicationGroup.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Unregister-AzWvdApplicationGroup" executed="True" result="Failure" success="False" time="0.0643" asserts="0" description="Unregister-AzWvdApplicationGroup">
+            <results>
+              <test-case description="Unregister ApplicationGroup" name="Unregister-AzWvdApplicationGroup.Unregister ApplicationGroup" time="0.0406" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Unregister-AzWvdApplicationGroup+[NoContext]+Unregister ApplicationGroup+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Unregister-AzWvdApplicationGroup.Tests.ps1: line 16
+16:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdApplication.Tests.ps1" executed="True" result="Failure" success="False" time="9.918" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdApplication.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdApplication" executed="True" result="Failure" success="False" time="0.1237" asserts="0" description="Update-AzWvdApplication">
+            <results>
+              <test-case description="Update" name="Update-AzWvdApplication.Update" time="0.0844" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdApplication+[NoContext]+Update+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdApplication.Tests.ps1: line 16
+16:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Update-MsixApplication" name="Update-AzWvdApplication.Update-MsixApplication" time="0.0095" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdApplication.Tests.ps1: line 80
+80:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdApplicationGroup.Tests.ps1" executed="True" result="Failure" success="False" time="10.7962" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdApplicationGroup.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdApplicationGroup" executed="True" result="Failure" success="False" time="0.0713" asserts="0" description="Update-AzWvdApplicationGroup">
+            <results>
+              <test-case description="Update" name="Update-AzWvdApplicationGroup.Update" time="0.0367" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdApplicationGroup+[NoContext]+Update+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdApplicationGroup.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdDesktop.Tests.ps1" executed="True" result="Failure" success="False" time="10.5402" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdDesktop.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdDesktop" executed="True" result="Failure" success="False" time="0.1113" asserts="0" description="Update-AzWvdDesktop">
+            <results>
+              <test-case description="Update" name="Update-AzWvdDesktop.Update" time="0.0852" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdDesktop+[NoContext]+Update+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/applicationGroups/ApplicationGroupPowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdDesktop.Tests.ps1: line 17
+17:         $applicationGroup = New-AzWvdApplicationGroup -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdHostPool.Tests.ps1" executed="True" result="Failure" success="False" time="9.2997" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdHostPool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdHostPool" executed="True" result="Failure" success="False" time="0.0993" asserts="0" description="Update-AzWvdHostPool">
+            <results>
+              <test-case description="Update" name="Update-AzWvdHostPool.Update" time="0.0753" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdHostPool+[NoContext]+Update+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershellContained1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdHostPool.Tests.ps1: line 23
+23:                             -ExpirationTime $((get-date).ToUniversalTime().AddDays(1).ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ')) `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdHostPoolPost.Tests.ps1" executed="True" result="Ignored" success="True" time="8.8037" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdHostPoolPost.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdHostPoolPost" executed="True" result="Ignored" success="True" time="0.0224" asserts="0" description="Update-AzWvdHostPoolPost">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzWvdHostPoolPost.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzWvdHostPoolPost.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdMsixPackage.Tests.ps1" executed="True" result="Failure" success="False" time="8.552" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdMsixPackage.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdMsixPackage" executed="True" result="Failure" success="False" time="0.0367" asserts="0" description="Update-AzWvdMsixPackage">
+            <results>
+              <test-case description="Update" name="Update-AzWvdMsixPackage.Update" time="0.0112" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Unable to find type [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications].</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdMsixPackage.Tests.ps1: line 21
+21:         $apps = @( [Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20210712.IMsixPackageApplications]@{appId = 'MsixTest_Application_Id'; description = 'testing from ps'; appUserModelID = 'MsixTest_Application_ModelID'; friendlyName = 'some name'; iconImageName = 'Apptile'; rawIcon = $data1; rawPng = $data1 })
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdScalingPlan.Tests.ps1" executed="True" result="Failure" success="False" time="7.911" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdScalingPlan.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdScalingPlan" executed="True" result="Failure" success="False" time="0.1189" asserts="0" description="Update-AzWvdScalingPlan">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzWvdScalingPlan.UpdateExpanded" time="0.094" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdScalingPlan+[NoContext]+UpdateExpanded+$DELETE+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/jehurren-westcentralus/providers/Microsoft.DesktopVirtualization/scalingPlans/ScalingPlanPowershellContained1?api-version=2022-10-14-preview+2' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdScalingPlan.Tests.ps1: line 130
+130:             $scalingPlan = Remove-AzWvdScalingPlan `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdScalingPlanPooledSchedule.Tests.ps1" executed="True" result="Ignored" success="True" time="9.1871" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdScalingPlanPooledSchedule.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdScalingPlanPooledSchedule" executed="True" result="Ignored" success="True" time="0.0206" asserts="0" description="Update-AzWvdScalingPlanPooledSchedule">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzWvdScalingPlanPooledSchedule.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzWvdScalingPlanPooledSchedule.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdSessionHost.Tests.ps1" executed="True" result="Failure" success="False" time="8.2844" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdSessionHost.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdSessionHost" executed="True" result="Failure" success="False" time="0.1072" asserts="0" description="Update-AzWvdSessionHost">
+            <results>
+              <test-case description="Update" name="Update-AzWvdSessionHost.Update" time="0.0841" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdSessionHost+[NoContext]+Update+$PATCH+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/hostPools/HostPoolPowershell1/sessionHosts/PowershellVM-0.wvdarmtest1.net?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdSessionHost.Tests.ps1: line 16
+16:         $sessionHost = Update-AzWvdSessionHost -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdSessionHostConfiguration.Tests.ps1" executed="True" result="Ignored" success="True" time="7.8737" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdSessionHostConfiguration.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdSessionHostConfiguration" executed="True" result="Ignored" success="True" time="0.0232" asserts="0" description="Update-AzWvdSessionHostConfiguration">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzWvdSessionHostConfiguration.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzWvdSessionHostConfiguration.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdSessionHostManagement.Tests.ps1" executed="True" result="Ignored" success="True" time="8.2586" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdSessionHostManagement.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdSessionHostManagement" executed="True" result="Ignored" success="True" time="0.0161" asserts="0" description="Update-AzWvdSessionHostManagement">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzWvdSessionHostManagement.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzWvdSessionHostManagement.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="/src/src/DesktopVirtualization/test/Update-AzWvdWorkspace.Tests.ps1" executed="True" result="Failure" success="False" time="9.5032" asserts="0" description="/src/src/DesktopVirtualization/test/Update-AzWvdWorkspace.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzWvdWorkspace" executed="True" result="Failure" success="False" time="0.0619" asserts="0" description="Update-AzWvdWorkspace">
+            <results>
+              <test-case description="Update" name="Update-AzWvdWorkspace.Update" time="0.0349" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Missing Request 'Update-AzWvdWorkspace+[NoContext]+Update+$PUT+https://management.azure.com/subscriptions/292d7caa-a878-4de8-b774-689097666272/resourceGroups/datr-canadaeast/providers/Microsoft.DesktopVirtualization/workspaces/WorkspacePowershell1?api-version=2022-10-14-preview+1' in recording file (Parameter 'rqKey')</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, /src/src/DesktopVirtualization/test/Update-AzWvdWorkspace.Tests.ps1: line 16
+16:         $workspace = New-AzWvdWorkspace -SubscriptionId $env.SubscriptionId `
+</stack-trace>
+                </failure>
+              </test-case>
             </results>
           </test-suite>
         </results>
