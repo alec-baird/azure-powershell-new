@@ -15,15 +15,16 @@ Update a workspace.
 ### UpdateExpanded (Default)
 ```
 Update-AzWvdWorkspace -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-ApplicationGroupReference <String[]>] [-Description <String>] [-FriendlyName <String>] [-Tag <Hashtable>]
- [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-ApplicationGroupReference <String[]>] [-Description <String>] [-FriendlyName <String>]
+ [-PublicNetworkAccess <PublicNetworkAccess>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
 Update-AzWvdWorkspace -InputObject <IDesktopVirtualizationIdentity> [-ApplicationGroupReference <String[]>]
- [-Description <String>] [-FriendlyName <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+ [-Description <String>] [-FriendlyName <String>] [-PublicNetworkAccess <PublicNetworkAccess>]
+ [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -141,6 +142,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PublicNetworkAccess
+Enabled to allow this resource to be access from the public network
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.PublicNetworkAccess
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
@@ -227,7 +243,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IWorkspace
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IWorkspace
 
 ## NOTES
 
@@ -244,7 +260,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
   - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
   - `[Id <String>]`: Resource identity path
+  - `[Location <String>]`: The location of the operation result.
   - `[MsixPackageFullName <String>]`: The version specific package full name of the MSIX package within specified hostpool
+  - `[OperationResultId <String>]`: The Guid of the operation result.
+  - `[OperationStatusId <String>]`: The Guid of the operation status.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection associated with the Azure resource
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[ScalingPlanName <String>]`: The name of the scaling plan.

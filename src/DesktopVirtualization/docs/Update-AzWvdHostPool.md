@@ -78,7 +78,7 @@ Maintenance windows are 2 hours long.
 To construct, see NOTES section for AGENTUPDATEMAINTENANCEWINDOW properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IMaintenanceWindowPatchProperties[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IMaintenanceWindowPatchProperties[]
 Parameter Sets: (All)
 Aliases:
 
@@ -483,7 +483,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMTemplate
-VM template for sessionhosts configuration within hostpool.
+Deprecated: VM template for sessionhosts configuration within hostpool.
+This property has been deprecated.
 
 ```yaml
 Type: System.String
@@ -537,7 +538,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IHostPool
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IHostPool
 
 ## NOTES
 
@@ -558,7 +559,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
   - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
   - `[Id <String>]`: Resource identity path
+  - `[Location <String>]`: The location of the operation result.
   - `[MsixPackageFullName <String>]`: The version specific package full name of the MSIX package within specified hostpool
+  - `[OperationResultId <String>]`: The Guid of the operation result.
+  - `[OperationStatusId <String>]`: The Guid of the operation status.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection associated with the Azure resource
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[ScalingPlanName <String>]`: The name of the scaling plan.

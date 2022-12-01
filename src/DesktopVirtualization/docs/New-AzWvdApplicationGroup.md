@@ -14,12 +14,13 @@ Create or update an applicationGroup.
 
 ```
 New-AzWvdApplicationGroup -Name <String> -ResourceGroupName <String>
- -ApplicationGroupType <ApplicationGroupType> -HostPoolArmPath <String> [-SubscriptionId <String>]
- [-Description <String>] [-FriendlyName <String>] [-IdentityType <ResourceIdentityType>] [-Kind <String>]
- [-Location <String>] [-ManagedBy <String>] [-PlanName <String>] [-PlanProduct <String>]
- [-PlanPromotionCode <String>] [-PlanPublisher <String>] [-PlanVersion <String>] [-SkuCapacity <Int32>]
- [-SkuFamily <String>] [-SkuName <String>] [-SkuSize <String>] [-SkuTier <SkuTier>] [-Tag <Hashtable>]
- [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ -ApplicationGroupType <ApplicationGroupType> -HostPoolArmPath <String> -Location <String>
+ [-SubscriptionId <String>] [-Description <String>] [-FriendlyName <String>]
+ [-IdentityType <ResourceIdentityType>] [-Kind <String>] [-ManagedBy <String>]
+ [-MigrationRequestMigrationPath <String>] [-MigrationRequestOperation <Operation>] [-PlanName <String>]
+ [-PlanProduct <String>] [-PlanPromotionCode <String>] [-PlanPublisher <String>] [-PlanVersion <String>]
+ [-SkuCapacity <Int32>] [-SkuFamily <String>] [-SkuName <String>] [-SkuSize <String>] [-SkuTier <SkuTier>]
+ [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -182,7 +183,7 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -196,6 +197,36 @@ If this is present, complete mode deployment will not delete the resource if it 
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationRequestMigrationPath
+The path to the legacy object to migrate.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrationRequestOperation
+The type of operation for migration.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.Operation
 Parameter Sets: (All)
 Aliases:
 
@@ -464,7 +495,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IApplicationGroup
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IApplicationGroup
 
 ## NOTES
 

@@ -14,18 +14,19 @@ Create or update a host pool.
 
 ### CreateExpanded (Default)
 ```
-New-AzWvdHostPool -HostPoolType <HostPoolType> -LoadBalancerType <LoadBalancerType> -Name <String>
- -PreferredAppGroupType <PreferredAppGroupType> -ResourceGroupName <String> [-Location <String>]
+New-AzWvdHostPool -HostPoolType <HostPoolType> -LoadBalancerType <LoadBalancerType> -Location <String>
+ -Name <String> -PreferredAppGroupType <PreferredAppGroupType> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-AgentUpdateMaintenanceWindow <IMaintenanceWindowProperties[]>]
  [-AgentUpdateMaintenanceWindowTimeZone <String>] [-AgentUpdateType <SessionHostComponentUpdateType>]
  [-AgentUpdateUseSessionHostLocalTime] [-CustomRdpProperty <String>] [-Description <String>]
  [-ExpirationTime <DateTime>] [-FriendlyName <String>] [-IdentityType <ResourceIdentityType>] [-Kind <String>]
- [-ManagedBy <String>] [-MaxSessionLimit <Int32>] [-MigrationRequestMigrationPath <String>]
- [-MigrationRequestOperation <Operation>] [-PersonalDesktopAssignmentType <PersonalDesktopAssignmentType>]
- [-PlanName <String>] [-PlanProduct <String>] [-PlanPromotionCode <String>] [-PlanPublisher <String>]
- [-PlanVersion <String>] [-PublicNetworkAccess <HostpoolPublicNetworkAccess>]
- [-RegistrationInfoToken <String>] [-RegistrationTokenOperation <RegistrationTokenOperation>] [-Ring <Int32>]
- [-SkuCapacity <Int32>] [-SkuFamily <String>] [-SkuName <String>] [-SkuSize <String>] [-SkuTier <SkuTier>]
+ [-ManagedBy <String>] [-ManagementType <ManagementType>] [-MaxSessionLimit <Int32>]
+ [-MigrationRequestMigrationPath <String>] [-MigrationRequestOperation <Operation>]
+ [-PersonalDesktopAssignmentType <PersonalDesktopAssignmentType>] [-PlanName <String>] [-PlanProduct <String>]
+ [-PlanPromotionCode <String>] [-PlanPublisher <String>] [-PlanVersion <String>]
+ [-PublicNetworkAccess <HostpoolPublicNetworkAccess>] [-RegistrationInfoToken <String>]
+ [-RegistrationTokenOperation <RegistrationTokenOperation>] [-Ring <Int32>] [-SkuCapacity <Int32>]
+ [-SkuFamily <String>] [-SkuName <String>] [-SkuSize <String>] [-SkuTier <SkuTier>]
  [-SsoadfsAuthority <String>] [-SsoClientId <String>] [-SsoClientSecretKeyVaultPath <String>]
  [-SsoSecretType <SsoSecretType>] [-StartVMOnConnect] [-Tag <Hashtable>] [-ValidationEnvironment]
  [-VMTemplate <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
@@ -112,7 +113,7 @@ Maintenance windows are 2 hours long.
 To construct, see NOTES section for AGENTUPDATEMAINTENANCEWINDOW properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IMaintenanceWindowProperties[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IMaintenanceWindowProperties[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -343,6 +344,22 @@ If this is present, complete mode deployment will not delete the resource if it 
 
 ```yaml
 Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementType
+The type of management for this hostpool, Automated or Standard.
+The default value is Automated.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.ManagementType
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -799,7 +816,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMTemplate
-VM template for sessionhosts configuration within hostpool.
+Deprecated: VM template for sessionhosts configuration within hostpool.
+This property has been deprecated.
 
 ```yaml
 Type: System.String
@@ -866,7 +884,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IHostPool
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IHostPool
 
 ## NOTES
 

@@ -13,14 +13,14 @@ Create or update a scaling plan.
 ## SYNTAX
 
 ```
-New-AzWvdScalingPlan -Name <String> -ResourceGroupName <String> -TimeZone <String> [-SubscriptionId <String>]
- [-Description <String>] [-ExclusionTag <String>] [-FriendlyName <String>]
+New-AzWvdScalingPlan -Name <String> -ResourceGroupName <String> -Location <String> -TimeZone <String>
+ [-SubscriptionId <String>] [-Description <String>] [-ExclusionTag <String>] [-FriendlyName <String>]
  [-HostPoolReference <IScalingHostPoolReference[]>] [-HostPoolType <ScalingHostPoolType>]
- [-IdentityType <ResourceIdentityType>] [-Kind <String>] [-Location <String>] [-ManagedBy <String>]
- [-PlanName <String>] [-PlanProduct <String>] [-PlanPromotionCode <String>] [-PlanPublisher <String>]
- [-PlanVersion <String>] [-Schedule <IScalingSchedule[]>] [-SkuCapacity <Int32>] [-SkuFamily <String>]
- [-SkuName <String>] [-SkuSize <String>] [-SkuTier <SkuTier>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-IdentityType <ResourceIdentityType>] [-Kind <String>] [-ManagedBy <String>] [-PlanName <String>]
+ [-PlanProduct <String>] [-PlanPromotionCode <String>] [-PlanPublisher <String>] [-PlanVersion <String>]
+ [-Schedule <IScalingSchedule[]>] [-SkuCapacity <Int32>] [-SkuFamily <String>] [-SkuName <String>]
+ [-SkuSize <String>] [-SkuTier <SkuTier>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,7 +143,7 @@ List of ScalingHostPoolReference definitions.
 To construct, see NOTES section for HOSTPOOLREFERENCE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IScalingHostPoolReference[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IScalingHostPoolReference[]
 Parameter Sets: (All)
 Aliases:
 
@@ -209,7 +209,7 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -349,7 +349,7 @@ List of ScalingPlanPooledSchedule definitions.
 To construct, see NOTES section for SCHEDULE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IScalingSchedule[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IScalingSchedule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -522,7 +522,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IScalingPlan
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IScalingPlan
 
 ## NOTES
 

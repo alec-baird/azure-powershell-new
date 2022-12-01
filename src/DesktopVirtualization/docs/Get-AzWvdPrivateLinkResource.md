@@ -8,17 +8,24 @@ schema: 2.0.0
 # Get-AzWvdPrivateLinkResource
 
 ## SYNOPSIS
-List the private link resources available for this workspace.
+List the private link resources available for this hostpool.
 
 ## SYNTAX
 
+### List (Default)
+```
+Get-AzWvdPrivateLinkResource -HostPoolName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### List1
 ```
 Get-AzWvdPrivateLinkResource -ResourceGroupName <String> -WorkspaceName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-List the private link resources available for this workspace.
+List the private link resources available for this hostpool.
 
 ## EXAMPLES
 
@@ -61,6 +68,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HostPoolName
+The name of the host pool within the specified resource group
+
+```yaml
+Type: System.String
+Parameter Sets: List
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
@@ -97,7 +119,7 @@ The name of the workspace
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: List1
 Aliases:
 
 Required: True
@@ -114,7 +136,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IPrivateLinkResource
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IPrivateLinkResource
 
 ## NOTES
 

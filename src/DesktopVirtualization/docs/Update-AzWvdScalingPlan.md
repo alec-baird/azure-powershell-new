@@ -152,7 +152,7 @@ List of ScalingHostPoolReference definitions.
 To construct, see NOTES section for HOSTPOOLREFERENCE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IScalingHostPoolReference[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IScalingHostPoolReference[]
 Parameter Sets: (All)
 Aliases:
 
@@ -215,7 +215,7 @@ List of ScalingSchedule definitions.
 To construct, see NOTES section for SCHEDULE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IScalingSchedule[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IScalingSchedule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -311,7 +311,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.IScalingPlan
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.IScalingPlan
 
 ## NOTES
 
@@ -332,7 +332,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
   - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
   - `[Id <String>]`: Resource identity path
+  - `[Location <String>]`: The location of the operation result.
   - `[MsixPackageFullName <String>]`: The version specific package full name of the MSIX package within specified hostpool
+  - `[OperationResultId <String>]`: The Guid of the operation result.
+  - `[OperationStatusId <String>]`: The Guid of the operation status.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection associated with the Azure resource
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[ScalingPlanName <String>]`: The name of the scaling plan.

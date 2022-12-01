@@ -35,11 +35,17 @@ Registration token of the host pool.
 ### [Get-AzWvdMsixPackage](Get-AzWvdMsixPackage.md)
 Get a msixpackage.
 
+### [Get-AzWvdOperationResult](Get-AzWvdOperationResult.md)
+Operation status of an async operation.
+
+### [Get-AzWvdOperationStatuses](Get-AzWvdOperationStatuses.md)
+Operation status of an async operation.
+
 ### [Get-AzWvdPrivateEndpointConnection](Get-AzWvdPrivateEndpointConnection.md)
 Get a private endpoint connection.
 
 ### [Get-AzWvdPrivateLinkResource](Get-AzWvdPrivateLinkResource.md)
-List the private link resources available for this workspace.
+List the private link resources available for this hostpool.
 
 ### [Get-AzWvdRegistrationInfo](Get-AzWvdRegistrationInfo.md)
 Get the Windows virtual desktop registration info.
@@ -53,14 +59,41 @@ Get a ScalingPlanPooledSchedule.
 ### [Get-AzWvdSessionHost](Get-AzWvdSessionHost.md)
 Get a session host.
 
+### [Get-AzWvdSessionHostConfiguration](Get-AzWvdSessionHostConfiguration.md)
+Get a SessionHostConfiguration.
+
+### [Get-AzWvdSessionHostManagement](Get-AzWvdSessionHostManagement.md)
+Get a SessionHostManagement.
+
+### [Get-AzWvdSessionHostManagementsOperationResult](Get-AzWvdSessionHostManagementsOperationResult.md)
+Get Operation result for SessionHostManagement
+
+### [Get-AzWvdSessionHostManagementsOperationStatus](Get-AzWvdSessionHostManagementsOperationStatus.md)
+Get Operation status for SessionHostManagement
+
 ### [Get-AzWvdStartMenuItem](Get-AzWvdStartMenuItem.md)
 List start menu items in the given application group.
+
+### [Get-AzWvdUpdateDetail](Get-AzWvdUpdateDetail.md)
+Operation status of a validate hostpool update.
+
+### [Get-AzWvdUpdateOperationResult](Get-AzWvdUpdateOperationResult.md)
+Operation status of a validate hostpool update.
+
+### [Get-AzWvdUpdateValidationOperationResult](Get-AzWvdUpdateValidationOperationResult.md)
+Operation status of a validate hostpool update.
 
 ### [Get-AzWvdUserSession](Get-AzWvdUserSession.md)
 Get a userSession.
 
 ### [Get-AzWvdWorkspace](Get-AzWvdWorkspace.md)
 Get a workspace.
+
+### [Invoke-AzWvdControlHostPoolUpdate](Invoke-AzWvdControlHostPoolUpdate.md)
+Control update of a hostpool.
+
+### [Invoke-AzWvdDoHostPoolNotUseInternalApi](Invoke-AzWvdDoHostPoolNotUseInternalApi.md)
+This call is only to be used by the service, DO NOT USE.
 
 ### [New-AzWvdApplication](New-AzWvdApplication.md)
 Create or update an application.
@@ -82,6 +115,12 @@ Create or update a scaling plan.
 
 ### [New-AzWvdScalingPlanPooledSchedule](New-AzWvdScalingPlanPooledSchedule.md)
 Create or update a ScalingPlanPooledSchedule.
+
+### [New-AzWvdSessionHostConfiguration](New-AzWvdSessionHostConfiguration.md)
+Create or update a SessionHostConfiguration.
+
+### [New-AzWvdSessionHostManagement](New-AzWvdSessionHostManagement.md)
+Create or update a SessionHostManagement.
 
 ### [New-AzWvdWorkspace](New-AzWvdWorkspace.md)
 Create or update a workspace.
@@ -140,6 +179,10 @@ Update a desktop.
 ### [Update-AzWvdHostPool](Update-AzWvdHostPool.md)
 Update a host pool.
 
+### [Update-AzWvdHostPoolPost](Update-AzWvdHostPoolPost.md)
+Initiates a hostpool update or schedule an update for the future.
+When validateOnly is true this will only run validations and return warnings and errors.
+
 ### [Update-AzWvdMsixPackage](Update-AzWvdMsixPackage.md)
 Update an  MSIX Package.
 
@@ -151,6 +194,12 @@ Update a ScalingPlanPooledSchedule.
 
 ### [Update-AzWvdSessionHost](Update-AzWvdSessionHost.md)
 Update a session host.
+
+### [Update-AzWvdSessionHostConfiguration](Update-AzWvdSessionHostConfiguration.md)
+Update a SessionHostConfiguration.
+
+### [Update-AzWvdSessionHostManagement](Update-AzWvdSessionHostManagement.md)
+Update a SessionHostManagement.
 
 ### [Update-AzWvdWorkspace](Update-AzWvdWorkspace.md)
 Update a workspace.

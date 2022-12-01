@@ -15,15 +15,15 @@ Update a session host.
 ### UpdateExpanded (Default)
 ```
 Update-AzWvdSessionHost -HostPoolName <String> -Name <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-Force] [-AllowNewSession] [-AssignedUser <String>] [-FriendlyName <String>]
- [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-SubscriptionId <String>] [-Force] [-RetryProvisioning] [-AllowNewSession] [-AssignedUser <String>]
+ [-FriendlyName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzWvdSessionHost -InputObject <IDesktopVirtualizationIdentity> [-Force] [-AllowNewSession]
- [-AssignedUser <String>] [-FriendlyName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+Update-AzWvdSessionHost -InputObject <IDesktopVirtualizationIdentity> [-Force] [-RetryProvisioning]
+ [-AllowNewSession] [-AssignedUser <String>] [-FriendlyName <String>] [-DefaultProfile <PSObject>] [-Confirm]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -186,6 +186,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RetryProvisioning
+Flag to retry provisioning of sessionHost on failure
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 The ID of the target subscription.
 
@@ -241,7 +256,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20221014Preview.ISessionHost
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20220809Privatepreview.ISessionHost
 
 ## NOTES
 
@@ -258,7 +273,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[DesktopName <String>]`: The name of the desktop within the specified desktop group
   - `[HostPoolName <String>]`: The name of the host pool within the specified resource group
   - `[Id <String>]`: Resource identity path
+  - `[Location <String>]`: The location of the operation result.
   - `[MsixPackageFullName <String>]`: The version specific package full name of the MSIX package within specified hostpool
+  - `[OperationResultId <String>]`: The Guid of the operation result.
+  - `[OperationStatusId <String>]`: The Guid of the operation status.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection associated with the Azure resource
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[ScalingPlanName <String>]`: The name of the scaling plan.
